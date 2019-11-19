@@ -1,0 +1,26 @@
+*.suo
+*.vssscc
+
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+.vs/
+packages/
+
+[Dd]ist/
+[Nn]ode_modules/
+TAG.TMS.Web/node_modules.rar
+Web/Web.csproj.user
+Web/src/app/_models/requests/test.ts
+Domain/DAL/DAL.csproj.user
+Depoloy/DED_Database2/DED_Database2.jfm
+Depoloy/DED_Database2/DED_Database2.dbmdl
