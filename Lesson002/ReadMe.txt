@@ -1,3 +1,3 @@
+Lesson 2
 
-
-After we learn about MCV arch. and main component, we create a simple MVC project and focus on Razor Engine ,Templating and Routing.
+Simple CRUD operation on static data list with simple Views

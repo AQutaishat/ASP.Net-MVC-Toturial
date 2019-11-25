@@ -1,4 +1,4 @@
-﻿@model MyMVCApplication.Models.Student
+﻿@model IEnumerable<MyMVCApplication.Models.Student>
 
 @{
     ViewBag.Title = "Index";
@@ -8,15 +8,33 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "Edit")
 </p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.StudentName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Age)
+        </th>
+        <th></th>
+    </tr>
 
-<div>
-    Student Name : @Model.StudentName
-    <br>
-    @{
-        var c = "C#";
-        <text>Razor Code is HTML and @c</text>
-    }
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.StudentName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Age)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.StudentId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.StudentId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.StudentId })
+        </td>
+    </tr>
+}
 
-</div>
+</table>
