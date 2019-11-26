@@ -1,0 +1,25 @@
+﻿@model MyMVCApplication.Models.Student
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete  @Html.DisplayFor(model => model.StudentName) ?</h3>
+<div>
+    <hr />
+ 
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            @Html.HiddenFor(model => model.StudentId)
+
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
